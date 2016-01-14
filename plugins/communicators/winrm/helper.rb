@@ -19,7 +19,7 @@ module VagrantPlugins
         end
 
         info[:host] ||= winrm_address(machine)
-        info[:port] ||= winrm_port(machine, info[:host] == "127.0.0.1")
+        info[:port] ||= winrm_port(machine, info[:host] == "localhost")
         return info
       end
 
